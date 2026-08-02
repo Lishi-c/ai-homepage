@@ -72,7 +72,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* 等宽科技标签 */}
-          <span className="font-mono-tech mt-5 rounded-md bg-secondary px-2.5 py-1 text-xs tracking-widest text-primary">
+          <span className="font-mono-tech mt-6 rounded-md bg-secondary px-2.5 py-1 text-xs tracking-widest text-primary">
             CS&nbsp;STUDENT&nbsp;·&nbsp;v1
           </span>
 
@@ -84,7 +84,7 @@ const HomePage: React.FC = () => {
           </p>
 
           {/* 细线分割 */}
-          <div className="mt-6 flex items-center gap-3">
+          <div className="mt-8 flex items-center gap-3">
             <span className="h-px w-12 bg-border" />
             <Cpu className="h-4 w-4 text-accent" />
             <span className="h-px w-12 bg-border" />
@@ -92,7 +92,7 @@ const HomePage: React.FC = () => {
         </header>
 
         {/* 个人信息展示区 */}
-        <section className="mt-10">
+        <section className="mt-12">
           <div className="mb-4 flex items-center gap-2">
             <span className="h-4 w-1 rounded-full bg-primary" />
             <h2 className="text-lg font-semibold text-foreground">关于我</h2>

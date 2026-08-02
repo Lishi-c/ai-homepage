@@ -17,7 +17,7 @@ const DigitalTwinChat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "twin",
-      content: "你好，我是从德俊的数字分身，由真实大模型驱动。你可以向我提问，了解关于他的更多信息～",
+      content: "嗨，我是从德俊的数字分身。想了解他的近况、作品或者怎么联系他，随时问我～",
     },
   ]);
   const [input, setInput] = useState("");
