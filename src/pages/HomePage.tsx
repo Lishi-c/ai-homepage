@@ -26,20 +26,20 @@ const infoItems = [
   },
 ];
 
-// 真实可点击的联系方式（请替换为你自己的账号）
+// 真实可点击的联系方式
 const contacts = [
   {
     icon: Mail,
     label: "邮箱",
-    value: "dejun@example.com",
-    href: "mailto:dejun@example.com",
+    value: "2645337092@qq.com",
+    href: "mailto:2645337092@qq.com",
     tone: "sky" as const,
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/dejun",
-    href: "https://github.com",
+    value: "github.com/Lishi-c",
+    href: "https://github.com/Lishi-c",
     tone: "green" as const,
   },
   {
