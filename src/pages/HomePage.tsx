@@ -53,16 +53,12 @@ const contacts = [
 
 const HomePage: React.FC = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
-      {/* 背景层：淡网格 + 天蓝光晕 */}
-      <div className="pointer-events-none absolute inset-0 z-0 tech-grid" />
-      <div className="pointer-events-none absolute -top-24 left-1/2 z-0 h-72 w-72 -translate-x-1/2 glow-sky" />
-
+    <div className="relative min-h-screen w-full">
       <div className="relative z-10 mx-auto w-full max-w-2xl px-4 py-10 md:py-16">
         {/* 头像 + 名字 + 一句话介绍 */}
         <header className="flex flex-col items-center text-center">
           <div className="relative">
-            <div className="h-28 w-28 overflow-hidden rounded-lg border border-border bg-muted shadow-sm ring-2 ring-primary/20 md:h-32 md:w-32">
+            <div className="h-28 w-28 overflow-hidden rounded-lg border border-border bg-muted shadow-sm md:h-32 md:w-32">
               <img
                 src={AVATAR_URL}
                 alt="从德俊的头像"
@@ -89,9 +85,9 @@ const HomePage: React.FC = () => {
 
           {/* 细线分割 */}
           <div className="mt-6 flex items-center gap-3">
-            <span className="h-px w-16 bg-gradient-to-r from-transparent to-primary/40" />
+            <span className="h-px w-12 bg-border" />
             <Cpu className="h-4 w-4 text-accent" />
-            <span className="h-px w-16 bg-gradient-to-l from-transparent to-primary/40" />
+            <span className="h-px w-12 bg-border" />
           </div>
         </header>
 
