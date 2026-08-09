@@ -11,95 +11,99 @@ All colors MUST be HSL.
   :root {
     --radius: 0.625rem;
 
-    /* 白色基底 */
-    --background: 210 40% 99%;
-    --foreground: 215 25% 12%;
+    /* 纯白基底 — 干净明亮 */
+    --background: 0 0% 100%;
+    --foreground: 240 4% 10%;
 
-    /* 纯白卡片 */
+    /* 卡片 */
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 12%;
+    --card-foreground: 240 4% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 12%;
+    --popover-foreground: 240 4% 10%;
 
-    /* 天蓝主色 */
-    --primary: 199 89% 48%;
+    /* 主色 — 靛蓝灰，克制但有存在感 */
+    --primary: 228 35% 38%;
     --primary-foreground: 0 0% 100%;
 
-    /* 浅蓝灰次级 */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 215 25% 18%;
+    /* 次级 — 极浅暖灰 */
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 4% 16%;
 
-    /* 极浅蓝灰 */
-    --muted: 210 30% 95%;
-    --muted-foreground: 215 16% 47%;
+    /* 静默 */
+    --muted: 240 5% 94%;
+    --muted-foreground: 240 3% 46%;
 
-    /* 浅绿点缀 */
-    --accent: 152 60% 45%;
+    /* 点缀 — 柔和翠绿，用于在线提示和小图标 */
+    --accent: 155 48% 43%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 45%;
+    --destructive: 0 65% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    /* 极浅蓝灰边框 */
-    --border: 214 25% 90%;
-    --input: 214 25% 90%;
-    --ring: 199 89% 48%;
+    /* 边框 — 极淡 */
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 228 35% 38%;
 
-    --chart-1: 199 89% 48%;
-    --chart-2: 152 60% 45%;
-    --chart-3: 215 25% 30%;
-    --chart-4: 199 60% 65%;
-    --chart-5: 152 45% 60%;
+    --chart-1: 228 35% 38%;
+    --chart-2: 155 48% 43%;
+    --chart-3: 240 4% 30%;
+    --chart-4: 228 20% 55%;
+    --chart-5: 155 12% 50%;
 
-    --sidebar-background: 210 40% 99%;
-    --sidebar-foreground: 215 25% 20%;
-    --sidebar-primary: 199 89% 48%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 4% 14%;
+    --sidebar-primary: 228 35% 38%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 96%;
-    --sidebar-accent-foreground: 215 25% 18%;
-    --sidebar-border: 214 25% 90%;
-    --sidebar-ring: 199 89% 48%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 4% 16%;
+    --sidebar-border: 240 6% 90%;
+    --sidebar-ring: 228 35% 38%;
   }
 
   .dark {
-    --background: 215 30% 10%;
-    --foreground: 210 30% 92%;
-    --card: 215 28% 14%;
-    --card-foreground: 210 30% 92%;
-    --popover: 215 28% 14%;
-    --popover-foreground: 210 30% 92%;
-    --primary: 199 85% 55%;
-    --primary-foreground: 215 30% 10%;
-    --secondary: 215 25% 20%;
-    --secondary-foreground: 210 30% 92%;
-    --muted: 215 25% 20%;
-    --muted-foreground: 215 15% 60%;
-    --accent: 152 50% 50%;
-    --accent-foreground: 215 30% 10%;
-    --destructive: 0 62% 45%;
-    --destructive-foreground: 210 30% 92%;
-    --border: 215 20% 24%;
-    --input: 215 20% 24%;
-    --ring: 199 85% 55%;
-    --chart-1: 199 85% 55%;
-    --chart-2: 152 50% 50%;
-    --chart-3: 210 30% 65%;
-    --chart-4: 199 50% 55%;
-    --chart-5: 152 35% 55%;
-    --sidebar-background: 215 30% 10%;
-    --sidebar-foreground: 210 30% 92%;
-    --sidebar-primary: 199 85% 55%;
-    --sidebar-primary-foreground: 215 30% 10%;
-    --sidebar-accent: 215 25% 20%;
-    --sidebar-accent-foreground: 210 30% 92%;
-    --sidebar-border: 215 20% 24%;
-    --sidebar-ring: 199 85% 55%;
+    --background: 240 5% 8%;
+    --foreground: 240 5% 92%;
+    --card: 240 5% 12%;
+    --card-foreground: 240 5% 92%;
+    --popover: 240 5% 12%;
+    --popover-foreground: 240 5% 92%;
+    --primary: 228 30% 58%;
+    --primary-foreground: 240 5% 8%;
+    --secondary: 240 5% 16%;
+    --secondary-foreground: 240 5% 92%;
+    --muted: 240 5% 16%;
+    --muted-foreground: 240 5% 60%;
+    --accent: 155 45% 50%;
+    --accent-foreground: 240 5% 8%;
+    --destructive: 0 55% 50%;
+    --destructive-foreground: 240 5% 92%;
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 228 30% 58%;
+    --chart-1: 228 30% 58%;
+    --chart-2: 155 45% 50%;
+    --chart-3: 240 5% 60%;
+    --chart-4: 228 18% 60%;
+    --chart-5: 155 12% 55%;
+    --sidebar-background: 240 5% 8%;
+    --sidebar-foreground: 240 5% 92%;
+    --sidebar-primary: 228 30% 58%;
+    --sidebar-primary-foreground: 240 5% 8%;
+    --sidebar-accent: 240 5% 16%;
+    --sidebar-accent-foreground: 240 5% 92%;
+    --sidebar-border: 240 5% 20%;
+    --sidebar-ring: 228 30% 58%;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    font-size: 110%;
   }
 
   body {
