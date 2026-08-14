@@ -1,5 +1,5 @@
 import React from "react";
-import { BookOpen, Gamepad2, Eye, Mail, Github, Globe, ExternalLink } from "lucide-react";
+import { BookOpen, Gamepad2, Eye, Mail, Github, ExternalLink, FolderGit2 } from "lucide-react";
 import DigitalTwinChat from "@/components/home/DigitalTwinChat";
 
 const AVATAR_URL = "/images/avatar.jpg";
@@ -8,19 +8,19 @@ const infoItems = [
   {
     icon: BookOpen,
     label: "现在主要在做",
-    value: "整理自己的作品和写作方向",
+    value: "求职准备：搭建主页、整理作品集、用 AI 做小项目，往游戏开发方向走",
     tone: "sky" as const,
   },
   {
     icon: Gamepad2,
     label: "我的兴趣",
-    value: "PC 网游、数码外设",
+    value: "游戏（尤其 FPS）、数码外设、写作",
     tone: "green" as const,
   },
   {
     icon: Eye,
     label: "一个有记忆点的特点",
-    value: "专注力强，善于观察换位思考",
+    value: "共情力强、会读气氛，重感情、认真务实",
     tone: "sky" as const,
   },
 ];
@@ -41,12 +41,21 @@ const contacts = [
     href: "https://github.com/Lishi-c",
     tone: "green" as const,
   },
+];
+
+const projects = [
   {
-    icon: Globe,
-    label: "个人主页",
-    value: "127.0.0.1:5173",
-    href: "http://127.0.0.1:5173/",
+    icon: FolderGit2,
+    name: "个人主页 v1",
+    description: "轻科技风格个人站点，集成 AI 数字分身，支持流式对话",
+    href: "https://github.com/Lishi-c",
     tone: "sky" as const,
+  },
+  {
+    icon: FolderGit2,
+    name: "作品整理中",
+    description: "更多项目正在整理，敬请期待",
+    tone: "green" as const,
   },
 ];
 
@@ -82,7 +91,7 @@ const HomePage: React.FC = () => {
               从璃
             </h1>
             <p className="mt-2.5 max-w-prose text-pretty text-sm leading-relaxed text-muted-foreground md:text-base">
-              一个正在学习用 AI 做产品的大三计科学生
+              一个正在往游戏开发方向求职的计算机专业学生
             </p>
           </div>
         </header>
@@ -90,7 +99,7 @@ const HomePage: React.FC = () => {
         {/* 细线分割 */}
         <div className="mt-8 border-t border-border/50 md:mt-10" />
 
-        {/* 桌面端双栏：左 = 个人信息 + 联系方式，右 = 数字分身 */}
+        {/* 桌面端双栏：左 = 个人信息 + 作品 + 联系方式，右 = 数字分身 */}
         <div className="mt-8 grid grid-cols-1 gap-y-8 md:mt-10 md:grid-cols-12 md:gap-x-14 md:gap-y-0">
           {/* 左栏 */}
           <div className="md:col-span-7">
@@ -124,6 +133,51 @@ const HomePage: React.FC = () => {
                         {item.value}
                       </p>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* 作品展示区 */}
+            <section className="mt-6">
+              <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground/60">
+                作品
+              </h2>
+              <div className="mt-4 flex flex-col">
+                {projects.map((item, i) => (
+                  <div
+                    key={item.name}
+                    className={`flex items-start gap-4 py-4 ${
+                      i < projects.length - 1 ? "border-b border-border/40" : ""
+                    }`}
+                  >
+                    <span
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-md ${
+                        item.tone === "sky"
+                          ? "bg-primary/10 text-primary"
+                          : "bg-accent/10 text-accent"
+                      }`}
+                    >
+                      <item.icon className="h-4 w-4" />
+                    </span>
+                    <div className="min-w-0 flex-1 pt-0.5">
+                      <p className="text-base leading-relaxed text-foreground">
+                        {item.name}
+                      </p>
+                      <p className="mt-0.5 text-xs text-muted-foreground/70">
+                        {item.description}
+                      </p>
+                    </div>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 self-center rounded p-1 text-muted-foreground/40 transition-colors hover:text-primary"
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
+                    ) : null}
                   </div>
                 ))}
               </div>
@@ -176,7 +230,7 @@ const HomePage: React.FC = () => {
                 <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground/60">
                   数字分身
                 </h2>
-                <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2 py-0.5 text-[11px] font-medium text-accent">
+                <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent chat-badge-glow">
                   <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-accent" />
                   在线，可直接聊
                 </span>

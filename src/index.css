@@ -127,4 +127,14 @@ All colors MUST be HSL.
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(0.85); }
   }
+
+  /* 聊天入口 — 在线徽标呼吸光环 */
+  .chat-badge-glow {
+    animation: badge-glow 2.4s ease-in-out infinite;
+  }
+
+  @keyframes badge-glow {
+    0%, 100% { box-shadow: 0 0 0 0 hsla(155, 48%, 43%, 0.25); }
+    50% { box-shadow: 0 0 0 6px hsla(155, 48%, 43%, 0); }
+  }
 }
