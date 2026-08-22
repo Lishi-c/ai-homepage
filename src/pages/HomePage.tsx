@@ -54,7 +54,7 @@ const projects = [
   {
     icon: FolderGit2,
     name: "月蓝琉璃工作台",
-    description: "本地优先的个人工作台（任务、财务、健康、成长），Electron 桌面应用",
+    description: "个人工作台，管理任务、财务与健康",
     href: "https://github.com/Lishi-c/ai-workbench",
     tone: "green" as const,
   },
