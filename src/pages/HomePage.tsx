@@ -14,7 +14,7 @@ const infoItems = [
   {
     icon: Gamepad2,
     label: "我的兴趣",
-    value: "游戏（尤其 FPS）、数码外设、写作",
+    value: "游戏（尤其射击类）、数码外设、写作",
     tone: "green" as const,
   },
   {
