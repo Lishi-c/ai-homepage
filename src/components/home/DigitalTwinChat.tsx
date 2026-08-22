@@ -13,6 +13,14 @@ interface Message {
 
 const MAX_LENGTH = 200;
 
+// 去掉模型偶尔输出的 Markdown 加粗/斜体符号（如 **个人主页**），保持纯文本显示
+function stripMarkdownInline(text: string): string {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/\*(.+?)\*/g, "$1")
+    .replace(/`(.+?)`/g, "$1");
+}
+
 const DigitalTwinChat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -144,7 +152,7 @@ const DigitalTwinChat: React.FC = () => {
                     : "bg-secondary text-foreground"
                 }`}
               >
-                {msg.content || (loading ? (
+                {stripMarkdownInline(msg.content) || (loading ? (
                   <span className="inline-flex items-center gap-1 text-muted-foreground">
                     正在思考
                     <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-muted-foreground" />
