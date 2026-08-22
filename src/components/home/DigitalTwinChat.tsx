@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { streamChat, PERSONA_PROMPT, type ChatMessage } from "@/lib/llm";
 import { suggestedQuestions } from "@/lib/digital-twin";
+import ReactMarkdown from "react-markdown";
 
 interface Message {
   role: "user" | "twin";
@@ -12,14 +13,6 @@ interface Message {
 }
 
 const MAX_LENGTH = 200;
-
-// 去掉模型偶尔输出的 Markdown 加粗/斜体符号（如 **个人主页**），保持纯文本显示
-function stripMarkdownInline(text: string): string {
-  return text
-    .replace(/\*\*(.+?)\*\*/g, "$1")
-    .replace(/\*(.+?)\*/g, "$1")
-    .replace(/`(.+?)`/g, "$1");
-}
 
 const DigitalTwinChat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
@@ -152,12 +145,20 @@ const DigitalTwinChat: React.FC = () => {
                     : "bg-secondary text-foreground"
                 }`}
               >
-                {stripMarkdownInline(msg.content) || (loading ? (
-                  <span className="inline-flex items-center gap-1 text-muted-foreground">
-                    正在思考
-                    <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-muted-foreground" />
-                  </span>
-                ) : null)}
+                {msg.role === "twin" ? (
+                  msg.content ? (
+                    <ReactMarkdown components={{ p: ({ children }) => <>{children}</> }}>
+                      {msg.content}
+                    </ReactMarkdown>
+                  ) : loading ? (
+                    <span className="inline-flex items-center gap-1 text-muted-foreground">
+                      正在思考
+                      <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-muted-foreground" />
+                    </span>
+                  ) : null
+                ) : (
+                  msg.content
+                )}
               </div>
             </div>
           ))}
