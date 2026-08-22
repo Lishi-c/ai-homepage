@@ -12,7 +12,7 @@
 
 **移动端**
 
-![移动端](./docs/screenshots/homepage-mobile.jpg)  ![移动端](./docs/screenshots/homepage-mobile2.jpg)
+![移动端](./docs/screenshots/homepage-mobile1.jpg)  ![移动端](./docs/screenshots/homepage-mobile2.jpg)
 
 ## 功能特性
 
