@@ -6,13 +6,7 @@
 
 ## 预览
 
-**桌面端**
-
 ![桌面端](./docs/screenshots/homepage-desktop.jpg)
-
-**移动端**
-
-![移动端](./docs/screenshots/homepage-mobile1.jpg)
 
 ## 功能特性
 
